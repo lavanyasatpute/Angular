@@ -1,0 +1,33 @@
+select {
+    transition: all 0.3s ease;
+  }
+  select:hover {
+    transform: scale(1.1);
+  }
+
+  /*--------------*/
+  table {
+    margin: auto;
+    width: 50%;
+    border-collapse: collapse;
+  }
+  
+  thead th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  tbody th {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  table, th {
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    padding: 12px;
+  }
+  

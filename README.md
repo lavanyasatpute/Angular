@@ -1,6 +1,56 @@
-# Assessment01 Angular Module
+# Assessment Angular Module
+### Problem Statement 01
+Create a Component interaction with @Input and @Output
 
-## Problem Statement
+## Parent Component
+```typescript
+import { SelectorMatcher } from '@angular/compiler';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-product-catalog',
+  standalone: false,
+  templateUrl: './product-catalog.component.html',
+  styleUrl: './product-catalog.component.css'
+})
+export class ProductCatalogComponent {
+
+  ProductList = ['laptop','mouse','speaker','keyboard'];
+
+  CartData:string[] = [];
+// $event: string;
+  reciveData(cartProduct:string){
+    if(cartProduct){
+      this.CartData.push(cartProduct)
+      alert("Added a succesfully product in cart list...")
+      
+    }
+    
+  }
+}
+```
+## Child Component
+```typescript
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-product-item',
+  standalone: false,
+  templateUrl: './product-item.component.html',
+  styleUrl: './product-item.component.css'
+})
+export class ProductItemComponent {
+  @Input() List: string[] = [];
+
+  @Output() product = new EventEmitter<string>()
+  sendData(product:string){
+    this.product.emit(product);
+  }
+}
+```
+
+
+### Problem Statement 18
 Create a dynamic dropdown with event binding.
 
 ## Objectives

@@ -1,0 +1,6 @@
+<p>product-catalog works!</p>
+<h1>Cart</h1>
+<div *ngFor="let cartItem of CartData">
+    {{cartItem}}
+</div>
+<app-product-item [List]="ProductList" (product)="reciveData($event)"></app-product-item>

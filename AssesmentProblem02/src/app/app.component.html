@@ -1,0 +1,25 @@
+<div>
+    <h1>{{ title }}</h1>
+    <form [formGroup]="form">
+        <div formArrayName="question">
+            <div *ngFor="let questions of ques; let i = index" [formGroupName]="i">
+                <label for="question-{{i}}">{{controlsList[i]}}</label>
+                <!-- <ng-container *ngFor="let ctr of question"> -->
+                    <!-- <ng-container *ngFor="let controlName of question"> -->
+                        <input id="question-{{i}}" [formControlName]="controlsList[i]"/>
+                    <!-- </ng-container> -->
+                <!-- </ng-container> -->
+            </div>
+        </div>
+    </form><br>
+    <!-- <button (click)="display()">Display Form Data</button> -->
+    <div *ngIf="form.value">
+        <h2>Form Data:</h2>
+        <pre *ngFor="let item of form.value.question">{{ item | json }}</pre>
+    </div>
+</div>
+
+<label>Add the Question</label><br>
+Controls:<input type="text" #controls><br>
+Question:<input type="text" #question><br><br>
+<button (click)="addQuestion(question.value, controls.value)" type="button">ADD</button>

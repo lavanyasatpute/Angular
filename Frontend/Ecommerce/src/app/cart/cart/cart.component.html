@@ -1,0 +1,16 @@
+<div class="cart-container">
+  <h1>Shopping Cart</h1>
+  <div *ngFor="let product of cartList; let i = index" class="cart-item">
+    <img [src]="product.PImage" alt="{{product.PName}}" class="product-image">
+    <div class="product-details">
+      <h2>{{product.PName}}</h2>
+      <p>Category: {{product.PCategory}}</p>
+      <p>Price: ${{product.PPrice}}</p>
+    </div>
+    <button class="remove-button" (click)="removeProduct(i)">✖</button>
+  </div>
+  <div class="cart-total">
+    <h2>Total Price: ${{ totalPrice }}</h2>
+  </div>
+  <button class="order-button" (click)="OrderAllProduct(cartList)">Order</button>
+</div>

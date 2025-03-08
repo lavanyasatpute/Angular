@@ -1,0 +1,47 @@
+.product-container {
+    width: 200px; /* Adjust the width to make the boxes smaller */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px; /* Reduced padding for a more compact look */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    display: inline-block; /* Ensures the boxes are displayed side by side */
+    vertical-align: top; /* Aligns the boxes at the top */
+}
+
+.product-container:hover {
+    transform: translateY(-5px); /* Slightly reduced hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+    font-size: 16px; /* Smaller font size */
+}
+
+p {
+    font-family: 'Arial', sans-serif;
+    color: #777;
+    font-size: 14px; /* Smaller font size */
+}
+
+h5 {
+    font-family: 'Arial', sans-serif;
+    color: #888;
+    font-size: 14px; /* Smaller font size */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

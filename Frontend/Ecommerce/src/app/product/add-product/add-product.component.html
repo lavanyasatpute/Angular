@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="addProduct(form)" class="product-form" >
+  <div class="form-group">
+    <label for="PName">Product Name:</label>
+    <input type="text" id="PName" formControlName="PName"><br><br>
+  </div>
+
+  <div class="form-group">
+    <label for="PCategory">Product Category:</label>
+    <input type="text" id="PCategory" formControlName="PCategory"><br><br>
+  </div>
+
+  <div class="form-group">
+    <label for="PPrice">Price:</label>
+    <input type="number" id="PPrice" formControlName="PPrice"><br><br>
+  </div>
+
+  <div class="form-group">
+    <label for="PImage">Image:</label>
+    <input type="text" id="PImage" formControlName="PImage"><br><br>
+  </div>
+
+  <button type="submit" class="submit-button" [disabled]="!form.valid"><b>ADD Product</b></button>
+</form>
+<!-- <h1>{{form.value | json}}</h1> -->

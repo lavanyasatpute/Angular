@@ -1,0 +1,10 @@
+
+<h1>This is Product List</h1>
+<button class="btn btn-primary" routerLink="add-Product">Add Product</button>
+<div class="product-container" *ngFor="let item of ProductList">
+    <h2>Product Name: {{item.PName}}</h2>
+    <img src={{item.PImage}} alt="{{item.PName}}">
+    <p>Product Category: {{item.PCategory}}</p>
+    <h5>Price: {{item.PPrice | currency:'INR'}}</h5>
+    <button type="button" (click)="addToCart(item)">Add to Cart</button>
+</div>
